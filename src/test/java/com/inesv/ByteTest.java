@@ -9,9 +9,9 @@ public class ByteTest {
 
   public static void main(String[] args) {
     Integer sCode = 2;
-    System.out.println(sCode.shortValue());
+    System.out.println(sCode.byteValue());
 
-    System.out.println(Arrays.toString("0815".getBytes()));
+    System.out.println(Arrays.toString("1".getBytes()));
   }
 
 }
