@@ -8,10 +8,12 @@ import java.util.Arrays;
 public class ByteTest {
 
   public static void main(String[] args) {
-    Integer sCode = 2;
+    Integer sCode = 237;
     System.out.println(sCode.byteValue());
-
-    System.out.println(Arrays.toString("1".getBytes()));
+    byte s = 16;
+    Integer aa = s & 0xff;
+    System.out.println(aa);
+    //System.out.println(Arrays.toString("1".getBytes()));
   }
 
 }

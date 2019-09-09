@@ -1,7 +1,8 @@
 package com.inesv;
 
-import com.inesv.share.Packet;
-import com.inesv.share.packets.LoginPacket.SALoginPacket;
+import com.inesv.share.packets.channel.ChannelPacket;
+import com.inesv.share.packets.channel.CqJoinPacket;
+
 import java.util.Arrays;
 
 
@@ -11,15 +12,14 @@ import java.util.Arrays;
 public class PacketsTest {
 
   public static void main(String[] args) {
-    Short s = 100;
-    System.out.println(s.byteValue());
-
-
-
-    Packet saLoginPacket = new SALoginPacket();
-    saLoginPacket.setMetaData(new byte[8]);
-    System.out.println(Arrays.toString(saLoginPacket.getPacketBytes()));
-    System.out.println(-54&0xFF);
+    System.out.println("=====");
+    ChannelPacket channelPacket = new CqJoinPacket(1);
+    System.out.println(Arrays.toString(channelPacket.getPacketBytes()));
+    System.out.println(channelPacket.getPacketBytes().length);
+    byte[] bb = new byte[]{16,16};
+    System.out.println();
+    //System.out.println(Arrays.toString(saLoginPacket.getPacketBytes()));
+    //System.out.println(-54&0xFF);
     //System.out.println(Arrays.toString(serialize(saLoginPacket)));
   }
 

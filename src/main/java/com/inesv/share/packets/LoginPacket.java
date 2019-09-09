@@ -12,8 +12,10 @@ public class LoginPacket {
     //private Integer SN_CODE = LOGIN_CODE + 1;
     //private byte[] metaData = new byte[8];
 
-    public SALoginPacket() {
-      super("SALoginPacket",LOGIN_CODE + 1);
+
+    @Override
+    public byte[] getPacketBytes() {
+      return new byte[0];
     }
   }
 }
